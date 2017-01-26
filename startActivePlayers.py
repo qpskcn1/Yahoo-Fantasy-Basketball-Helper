@@ -71,7 +71,7 @@ def main():
 		sys.exit("Login Failed")
 
 	start_date = date.today()
-	num_days = 2
+	num_days = input("Enter number of days you want to start your active players: ")
 	try:
 		for _ in range(num_days):
 			start_active_players(session, league_id, team_id, start_date)
