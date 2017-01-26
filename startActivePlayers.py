@@ -1,3 +1,7 @@
+try:
+    from configparser import ConfigParser # python 3
+except ImportError:
+    from ConfigParser import ConfigParser # python 2.7
 import sys
 import fantasy_login as login
 import fantasy_team as tm
@@ -50,10 +54,12 @@ def start_active_players(session, league_id, team_id, start_date=None):
             player['opponent']))
 
 def main():
-	username = ''
-	password = ''
-	league_id = 15712
-	team_id = 4
+	config = ConfigParser()
+	config.read('config.ini')
+	username = config.get('LOGIN INFO', 'USERNAME')
+	password = config.get('LOGIN INFO', 'PASSWORD')
+	league_id = config.get('FANTASY INFO', 'LEAGUE_ID')
+	team_id = config.get('FANTASY INFO', 'TEAM_ID')
 	if username is None or password is None:
 		usage()
 
