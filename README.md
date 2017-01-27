@@ -11,6 +11,8 @@
 ```bash
 pip install beautifulsoup4
 ```
+* yahooscraper 0.3.0 (https://github.com/jbrudvik/yahooscraper)
+I modified this package into `fantasy_login.py` and `fantasy_team.py`
 
 ## Run the program
 
@@ -20,6 +22,8 @@ then you can find the league ID and team ID at the end of the URL.
 
 To run the program
 
-`python startActivePlayers.py`
+```
+python startActivePlayers.py
+```
 
 You will be prompted to enter the number of days you want this script to help you start active players.
