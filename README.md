@@ -1,4 +1,4 @@
-### Yahoo Fantasy Basketball Helper
+# Yahoo Fantasy Basketball Helper
 
 ## Current Features
 
